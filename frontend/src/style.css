@@ -1,0 +1,236 @@
+*, *::before, *::after {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@font-face {
+  font-family: PoP;
+  src: url(assets/font/PRINP___.ttf);
+}
+
+body {
+  background-color: black;
+}
+
+.landingBG {
+  height: 100vh;
+  width: 100%;
+  background-color: black;
+  overflow: hidden;
+}
+
+.landingBG img {
+  position: relative;
+  width: 90%;
+  min-width: 600px;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+#cookieBtn {
+  color: white;
+  padding: 10% 20%;
+  margin-left: -20%;
+}
+
+#noPage {
+  position: absolute;
+  text-align: center;
+  color: white;
+  top: 50vh;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+#main {
+  background-color: black;
+}
+
+#main #header {
+  padding: 30px 0;
+}
+
+#main #header h1 {
+  font-size: 60px;
+  text-align: center;
+  font-family: PoP, Courier, monospace;
+  color: white;
+  text-shadow: 3px 3px 10px red, 3px 3px 50px red;
+}
+
+#main #header h2 {
+  font-size: 40px;
+  text-align: center;
+  font-family: PoP, Courier, monospace;
+  color: white;
+  text-shadow: 3px 3px 10px red, 3px 3px 50px red;
+}
+
+#main #filters {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 2%;
+  margin-bottom: 5%;
+  font-size: 20px;
+  font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#main #filters span {
+  color: white;
+}
+
+#main #filters span.or {
+  font-style: italic;
+  margin: auto 0;
+}
+
+#main #filters span:first-child {
+  margin: 0 10px;
+}
+
+#main #content {
+  color: white;
+}
+
+#main #content .react-reveal.card {
+  width: 80%;
+  border: 2px solid #b61717;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#181818), to(black));
+  background-image: linear-gradient(#181818, black);
+  font-size: 25px;
+  padding: 20px 20px;
+  margin: 20px auto;
+}
+
+#main #content .react-reveal.card h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: PoP, Courier, monospace;
+  color: white;
+  text-shadow: 3px 3px 10px red, 3px 3px 50px red;
+}
+
+#main #content .react-reveal.card .flexCard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#main #content .react-reveal.card .flexCard img.charPic {
+  width: 33%;
+  min-width: 250px;
+  height: 33%;
+  border: 10px double #7e7e7e;
+}
+
+#main #content .react-reveal.card .flexCard .dataCont {
+  font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#main #content .react-reveal.card .flexCard .dataCont p {
+  padding: 20px;
+}
+
+#main #content .react-reveal.card .flexCard .dataCont p span.propTitle {
+  font-weight: 900;
+  text-decoration: underline;
+}
+
+.container {
+  position: relative;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.container input {
+  margin: 0 10px;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkmark {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  height: 15px;
+  width: 15px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+.container input:checked ~ .checkmark {
+  background-color: #b61717;
+}
+
+#textFilter {
+  padding: 3px;
+  outline: none;
+  border: none;
+  font-size: 16px;
+}
+
+select {
+  padding: 0 10px;
+  outline: none;
+  background-color: #ffffff;
+  font-size: 16px;
+  color: black;
+}
+
+select option {
+  color: white;
+  background-color: #b61717;
+}
+
+select option:disabled {
+  background-color: #5a1010;
+}
+
+@media screen and (max-width: 315px) {
+  .cookie-text {
+    font-size: 4vw;
+  }
+}
+
+@media screen and (max-width: 447px) {
+  .cookieBtnDiv {
+    position: relative;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+}
+
+@media screen and (max-width: 904px) {
+  .flexCard {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .flexCard .dataCont p {
+    text-align: center;
+  }
+}
+/*# sourceMappingURL=style.css.map */

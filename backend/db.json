@@ -1,0 +1,104 @@
+[
+	{
+		"call": "Prince",
+		"name": "Unknown",
+		"human": true,
+		"gender": 1,
+		"rank": "Prince",
+		"appear": [
+			"Sands of Time",
+			"Warrior Within",
+			"The Two Thrones"
+		],
+		"image": [
+			"princeSoT.png",
+			"princeWW.png",
+			"princeTTT.png"
+		]
+	},
+	{
+		"call": "Farah",
+		"name": "Farah",
+		"human": true,
+		"gender": 2,
+		"rank": "Princess",
+		"appear": [
+			"Sands of Time",
+			"The Two Thrones"
+		],
+		"image": [
+			"farahSoT.png",
+			"farahTTT.png"
+		]
+	},
+	{
+		"call": "Vizier",
+		"name": "Vizier",
+		"human": true,
+		"gender": 1,
+		"rank": "Vizier to the Maharajah",
+		"appear": [
+			"Sands of Time",
+			"The Two Thrones"
+		],
+		"image": [
+			"vizierSoT.png",
+			"vizierTTT1.png",
+			"vizierTTT2.png"
+		]
+	},
+	{
+		"call": "Dahaka",
+		"name": "Dahaka",
+		"human": false,
+		"gender": 3,
+		"rank": "Guardian of the Timeline",
+		"appear": [
+			"Warrior Within"
+		],
+		"image": [
+			"dahaka.png"
+		]
+	},
+	{
+		"call": "Kaileena",
+		"name": "Kaileena",
+		"human": false,
+		"gender": 2,
+		"rank": "Empress of Time",
+		"appear": [
+			"Warrior Within",
+			"The Two Thrones"
+		],
+		"image": [
+			"kaileenaWW.png",
+			"kaileenaTTT.png"
+		]
+	},
+	{
+		"call": "Shahdee",
+		"name": "Shahdee",
+		"human": false,
+		"gender": 2,
+		"rank": "Servant",
+		"appear": [
+			"Warrior Within"
+		],
+		"image": [
+			"shahdee.png"
+		]
+	},
+	{
+		"call": "Dark Prince",
+		"name": "Unknown",
+		"human": false,
+		"gender": 1,
+		"rank": "Inner-self",
+		"appear": [
+			"The Two Thrones"
+		],
+		"image": [
+			"darkprince.png"
+		]
+	}
+]
