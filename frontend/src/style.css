@@ -208,6 +208,25 @@ select option:disabled {
   background-color: #5a1010;
 }
 
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 5px #b6171796;
+          box-shadow: inset 0 0 5px #b6171796;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #b61717;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #690000;
+}
+
 @media screen and (max-width: 315px) {
   .cookie-text {
     font-size: 4vw;
