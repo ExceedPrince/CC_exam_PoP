@@ -69,7 +69,7 @@ body {
 		flex-wrap: wrap;
 		justify-content: center;
 		gap: 2%;
-		margin-bottom: 5%;
+		margin: 15px 0;
 		font-size: 20px;
 		font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
 		span {
@@ -82,6 +82,30 @@ body {
 
 			&:first-child {
 				margin: 0 10px;
+			}
+		}
+	}
+	#resetCont {
+		display: flex;
+  	justify-content: center;
+  	align-items: center;
+		margin: 3% 0;
+		#resetBtn{
+			outline: none;
+			border: none;
+			padding: 15px;
+			background-color: #b61717;
+			font-size: 20px;
+			font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+			color: white;
+			transition: all 0.3s;
+
+			&:hover {
+				background-color: #e93e3e;
+				cursor: pointer;
+			}
+			&:active {
+				background-color: #631212;
 			}
 		}
 	}
