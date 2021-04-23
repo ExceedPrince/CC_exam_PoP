@@ -4,15 +4,21 @@ import axios from 'axios';
 import Fade from 'react-reveal/Fade';
 
 const Characters = (props) => {
+	//All data
 	const [data, setData] = useState([]);
+	//Filtered data by name input
 	const [filtered, setFiltered] = useState();
+	//Filtered data by radio input
 	const [isHuman, setIsHuman] = useState(null);
+	//Filtered data by selection
 	const [gender, setGender] = useState("");
 
+	//call fetch function when the page is rendered
 	useEffect(() => {
 		showList()
 	}, [])
 
+	//synchronize radio filter to all filtered cases
 	useEffect(() => {
 		let humanFilter = data;
 		if (filtered && isHuman !== null && gender !== "") {
@@ -45,6 +51,7 @@ const Characters = (props) => {
 
 	}, [isHuman])
 
+	//synchronize selection filter to all filtered cases
 	useEffect(() => {
 		let genderFilter = data;
 		if (filtered && isHuman !== null && gender !== "") {
@@ -76,7 +83,7 @@ const Characters = (props) => {
 		}
 	}, [gender])
 
-
+	//fetch data
 	function showList() {
 		axios.get('http://localhost:8080/characters')
 			.then((response) => {
@@ -85,6 +92,7 @@ const Characters = (props) => {
 			});
 	}
 
+	//synchronize name input filter to all filtered cases
 	const editSearch = (e) => {
 		let keywords = e.target.value.toLowerCase();
 		let filtered = data;
@@ -141,6 +149,7 @@ const Characters = (props) => {
 		}
 	}
 
+	//reset all filter to default state
 	const resetAll = () => {
 		let radios = document.querySelectorAll(".humanFilter")
 		for (let i = 0; i < radios.length; i++) {
@@ -157,6 +166,7 @@ const Characters = (props) => {
 
 	return (
 		<>
+			{/* if you're new visitor and skipped the loading page, you will be redirected to that page */}
 			{!props.location.cookie ?
 				<Redirect to="/" />
 				:
@@ -195,12 +205,15 @@ const Characters = (props) => {
 						<button id="resetBtn" onClick={resetAll}>Reset all filter</button>
 					</div>
 					<div id="content">
+						{/* conditional rendering if data are downloaded or not */}
 						{filtered ?
 							filtered.map((item, index) => (
+								/* charcter cards will fade in and slide up */
 								<Fade key={index} duration={1000} bottom>
 									<div className="card" id={"card" + index} key={index}>
 										<h2>{item.call}</h2>
 										<div className="flexCard">
+											{/* if a character has more picture than 1, the chosen pic will be generated randomly */}
 											{item.image.length === 1 ?
 												<img className="charPic" src={`/img/${item.image}`} alt={item.call} />
 												: <img className="charPic" src={`/img/${item.image[Math.floor(Math.random() * item.image.length)]}`} />

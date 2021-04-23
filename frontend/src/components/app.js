@@ -1,10 +1,12 @@
 import React from 'react';
+//cookie package
 import CookieConsent from "react-cookie-consent";
 import { Redirect, Link } from 'react-router-dom';
 
 const App = () => {
 	return (
 		<>
+			{/* in case of new visitor you can see the loading page, else you're redirected to the home page */}
 			{document.cookie === "" ?
 				<div className="landingBG">
 					<img src="loading.gif" alt="loading" />
@@ -15,7 +17,7 @@ const App = () => {
 				}}
 				/>
 			}
-
+			{/* cookie component */}
 			<CookieConsent
 				location="bottom"
 				buttonText={
